@@ -40,4 +40,45 @@ other optional ones:&lt;/p&gt;
 &lt;span class="n"&gt;category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Posts&lt;/span&gt;
 &lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;
 &lt;span class="n"&gt;modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, running either of the following will create all the static html files
+in /output&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The question is how to automate pushing to GitHub pages.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Develop on branch gh-pages.&lt;/li&gt;
+&lt;li&gt;make publish, iterate.&lt;/li&gt;
+&lt;li&gt;When does, git commit, git push.&lt;/li&gt;
+&lt;li&gt;When ready to Actually Push (TM), checkout branch master.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now we need to copy contents of /output from branch gh-pages to the root
+folder in branch master, git commit, and pit push. Let's write a
+script that does that:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="nv"&gt;commitmessage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;`git log --format=%B -n 1 gh-pages`&amp;quot;&lt;/span&gt;
+git checkout gh-pages -- output/
+cp -r output/* ./
+rm -r output/
+git add .
+git commit -a &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$commitmessage&lt;/span&gt;&lt;span class="s2"&gt; -- Copied to branch master.&amp;quot;&lt;/span&gt;
+git push
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;This script is saved as deployfrombranch.sh added to gitignore. And, I
+believe we are done!&lt;/p&gt;</content></entry></feed>

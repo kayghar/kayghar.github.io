@@ -39,3 +39,25 @@ in /output
     make publish
 
 The question is how to automate pushing to GitHub pages.
+
+  1. Develop on branch gh-pages.
+  2. make publish, iterate.
+  3. When happy, git add ., git commit, git push.
+  4. When ready to Actually Push (TM), checkout branch master.
+
+Now we need to copy contents of /output from branch gh-pages to the root
+folder in branch master, git commit, and pit push. Let's write a
+script that does that:
+
+    #!/bin/bash
+
+    commitmessage="`git log --format=%B -n 1 gh-pages`"
+    git checkout gh-pages -- output/
+    cp -r output/* ./
+    rm -r output/
+    git add .
+    git commit -a "$commitmessage -- Copied to branch master."
+    git push
+
+This script is saved as deployfrombranch.sh added to gitignore. And, I
+believe we are done!
