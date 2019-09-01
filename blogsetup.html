@@ -66,6 +66,47 @@ other optional ones:</p>
 <span class="n">date</span><span class="o">:</span><span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">01</span>
 <span class="n">modified</span><span class="o">:</span><span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">01</span>
 </pre></div>
+
+
+<p>Now, running either of the following will create all the static html files
+in /output</p>
+<div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+<span class="n">make</span> <span class="n">publish</span>
+</pre></div>
+
+
+<p>The question is how to automate pushing to GitHub pages.</p>
+<ol>
+<li>Develop on branch gh-pages.</li>
+<li>make publish, iterate.</li>
+<li>When does, git commit, git push.</li>
+<li>When ready to Actually Push (TM), checkout branch master.</li>
+</ol>
+<p>Now we need to copy contents of /output from branch gh-pages to the root
+folder in branch master, git commit, and pit push. Let's write a
+script that does that:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">commitmessage</span><span class="o">=</span><span class="s2">&quot;`git log --format=%B -n 1 gh-pages`&quot;</span>
+git checkout gh-pages -- output/
+cp -r output/* ./
+rm -r output/
+git add .
+git commit -a <span class="s2">&quot;</span><span class="nv">$commitmessage</span><span class="s2"> -- Copied to branch master.&quot;</span>
+git push
+</pre></div>
+</td></tr></table>
+
+<p>This script is saved as deployfrombranch.sh added to gitignore. And, I
+believe we are done!</p>
     </div><!-- /.entry-content -->
 
   </article>
@@ -75,9 +116,6 @@ other optional ones:</p>
                         <h2>links</h2>
                         <ul>
                             <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
@@ -85,8 +123,7 @@ other optional ones:</p>
                         <ul>
                             <li><a href="https://kayghar.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
+                            <li><a href="http://twitter.com/kayghar">Twitter</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->
