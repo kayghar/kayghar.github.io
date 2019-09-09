@@ -3,6 +3,7 @@ slug: blogsetup
 category: Notes for Self
 date:2019-09-01
 modified:2019-09-03
+password:zkkS]GWwZ%N(;F>q)k*3XO6?
 
 # Blog Setup
 
@@ -67,3 +68,24 @@ script that does that:
 
 This script is saved as deployfrombranch.sh added to gitignore. And, I
 believe we are done!
+
+### Adding Password Protection
+
+Using [mindcruzer's extension](https://github.com/mindcruzer/pelican-encrypt-content)
+I have added password protection to certain pages. The passwords can be found
+in the 1password vault.
+
+* git clone the encrypt_content folder in the root pelican project folder.
+* Add the following to your pelicanconf.py file:
+
+        PLUGINS = ['encrypt_content']
+        ENCRYPT_CONTENT = {
+        'title_prefix': '[Encrypted]',
+        'summary': 'This content is encrypted.'
+        }
+
+* Inside the .md source file, add the password in the preamble.
+
+        title:mytitle
+        etc
+        password:mypassword

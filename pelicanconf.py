@@ -46,3 +46,11 @@ DISPLAY_PAGES_ON_MENU = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
+
+# Enable password protected pages https://github.com/mindcruzer/pelican-encrypt-content
+PLUGINS = ['encrypt_content']
+
+ENCRYPT_CONTENT = {
+    'title_prefix': '[Encrypted]',
+    'summary': 'This content is confidential and encrypted.'
+}
