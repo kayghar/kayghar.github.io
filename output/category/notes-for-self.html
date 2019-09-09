@@ -1,125 +1,69 @@
 <!DOCTYPE html>
-<head>
-  <title>Articles in {Notes for Self} category - Conferment of the Thirty Birds</title>
-  <meta charset='utf-8'/>
-  <meta content='width=device-width, initial-scale=1' name='viewport'/>
-      <link rel='stylesheet' href='/theme/css/main.css'/>
-</head>
+<html lang="en">
+  <head>
+      <title>Conferment of the Thirty Birds - Notes for Self category</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="/theme/static/css/main.css" />
+  </head>
 
-<body itemscope itemtype='https://schema.org/WebPage' itemref='publisher-name publisher-description'>
-  <div id='header'>
-    <div class='handle'><span class='dots'></span></div>
-    <div class='content'>
-      <div itemscope itemtype='https://schema.org/Organization' itemid=''>
-        <header id='publisher'>
-          <h1><a itemprop='url' rel='home' href=''><span itemprop='name' id='publisher-name'>Conferment of the Thirty Birds</span></a></h1>
-        </header>
-      </div>
+  <body id="index" class="home">
+    <header id="banner" class="body">
+            <h1><a href="/">Conferment of the Thirty Birds <strong></strong></a></h1>
+    
+    <nav id="menu"><ul>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/category/blog.html">Blog</a></li>
+        <li><a href="/cv.html">CV</a></li>
+        <li><a href="/pubs.html">Publications</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+        <li><a href="/archives.html">Archive</a></li>
+    </ul></nav><!-- /#menu -->
+  </header><!-- /#banner -->
+<section id="content"  class="body">
+<h1 class="entry-title">Notes for Self</h1>
 
-
-<nav itemscope itemtype='https://schema.org/SiteNavigationElement'>
-  <div class='container'>
-    <div class='handle'>(Pages)</div>
-    <div class='content'>
-        (<span itemprop='name'><a itemprop='url' href='/tags.html' >Tags</a></span>)
-        (<span itemprop='name'><a itemprop='url' href='/authors.html' >Authors</a></span>)
-        (<span itemprop='name'><a itemprop='url' href='/archives.html' >Archives</a></span>)
-    </div>
-  </div>
-
-
-  <div class='container' id='nav-breadcrumb-container'>
-    <div class='handle'>&gt;</div>
-    <div class='content'>
-
-
-<div itemscope itemtype='https://schema.org/BreadcrumbList'>
-          <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-    <a itemprop='item' href='/category/notes-for-self.html'><span itemprop='name'>Notes for Self</span></a>
-    <meta itemprop='position' content='3'/>
-  </span>
-  &lt;
-
-          <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-    <a itemprop='item' href='/categories.html'><span itemprop='name'>Categories</span></a>
-    <meta itemprop='position' content='2'/>
-  </span>
-  &lt;
-
-    <span itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-    <meta itemprop='name' content='Home'/>
-    <span itemprop='item' itemscope itemtype='https://schema.org/Blog'>
-      <meta itemprop='name' content='Conferment of the Thirty Birds'/>
-      <a itemprop='url' href=''>Home</a>
-    </span>
-    <meta itemprop='position' content='1'/>
-  </span>
-
-</div>
-
-<div itemscope itemtype='https://schema.org/BreadcrumbList'>
-    <span itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-    <meta itemprop='name' content='Home'/>
-    <span itemprop='item' itemscope itemtype='https://schema.org/Blog'>
-      <meta itemprop='name' content='Conferment of the Thirty Birds'/>
-      <a itemprop='url' href=''>Home</a>
-    </span>
-    <meta itemprop='position' content='1'/>
-  </span>
-
-</div>    </div>
-  </div>
-</nav>    </div>
-  </div>
-
-  <main>
-      <h2 itemprop='headline' id='content-title'>Articles in <span class='category'>Notes for Self</span> category</h2>
-
-      <div itemprop='mainEntity' itemscope itemtype='https://schema.org/Blog'>
-              <article itemprop='blogPost' itemscope itemtype='https://schema.org/BlogPosting' class='summary'>
-    <meta itemprop='headline' content='Blog Setup'/>
-    <link itemprop='publisher' itemscope itemtype='https://schema.org/Organization' itemref='publisher' href=''/>
-    <link itemprop='mainEntityOfPage' href='/blogsetup.html'/>
-    <meta itemprop='inLanguage' content='en'/>
-      <meta itemprop='wordCount' content='276'/>
+<ul id="post-list">
+        <li><article class="hentry">
+                <header> <h4 class="entry-title"><a href="/blogsetup.html" rel="bookmark" title="Permalink to Blog Setup">Blog Setup</a></h4> </header>
+                <div class="entry-content"> <h1>Blog Setup</h1>
+<p>Start by creating a new conda env for pelican and install</p>
+<div class="highlight"><pre><span></span><span class="n">conda</span> <span class="k">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pelican</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">python</span> <span class="n">pip</span> <span class="n">markdown</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+</pre></div>
 
 
-    <header>
-      <h2 itemprop='name'><a href='/blogsetup.html'>Blog Setup</a></h2>
-      <p>
-        <time itemprop='datePublished' datetime='2019-09-01 00:00:00-04:00' title='2019-09-01 00:00:00-04:00'>Sun 01 September 2019</time>
-          *
-          <time itemprop='dateModified' datetime='2019-09-03 00:00:00-04:00' title='2019-09-03 00:00:00-04:00'>Tue 03 September 2019</time>
-      </p>
-      <p class='author-cat-tag'>
-            <span itemprop='author' itemscope itemtype='https://schema.org/Person' class='author'>
-    <span itemprop='name' class='name'><a itemprop='url' rel='author' href='/author/kaveh-gharavi.html'>Kaveh Gharavi</a></span>
-  </span>
+<p>Then go to the kayghar.github.io folder and initiate the website</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
 
 
-          <span itemprop="articleSection" class='category'><a href='/category/notes-for-self.html'>Notes for Self</a></span>
+<p>Then go to /content and make this md file as the …</p> </div><!-- /.entry-content -->
+                <footer class="post-info">
+                        Posted <time class="published" datetime="2019-09-01T00:00:00-04:00">Sun 01 September 2019</time>.
+                </footer><!-- /.post-info -->
+        </article></li>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
+      <section id="extras" class="body">
+          <div class="blogroll">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://github.com/kayghar">GitHub</a></li>
+            </ul>
+          </div><!-- /.LINKS -->
+          <div class="social">
+            <h2>Social</h2>
+            <ul>
+                <li><a href="http://twitter.com/kayghar">Twitter</a></li>
+            </ul>
+          </div><!-- /.social -->
+      </section><!-- /#extras -->
+      <footer id="contentinfo" class="body">
+              <address id="about" class="vcard body">
+              Copyright (c) 2019, Kaveh Gharavi.
+              </address><!-- /#about -->
+      </footer><!-- /#contentinfo -->
 
-
-      </p>
-    </header>
-
-      <div class='summary'>
-        <p itemprop='description'>
-          Blog Setup Start by creating a new conda env for pelican and install conda create -n pelican conda install python pip markdown pip install pelican Then go to the kayghar.github.io folder and initiate the website pelican-quickstart Then go to /content and make this md file as the …
-        </p>
-        <span class='readmore'>
-          <a href='/blogsetup.html'>&gt;&gt;&gt;</a>
-        </span>
-      </div>
-  </article>
-
-
-      </div>
-  </main>
-
-
-  <footer>
-<!-- Proudly powered by Pelican which takes great advantage of Python, with Apricot theme (v0.1.0) by Yu-Jie Lin. -->
-
-  </footer>
-</body>
+  </body>
+</html>

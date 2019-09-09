@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block redirect %}
+<meta http-equiv = "refresh" content = "0; url = {{ SITEURL }}/pages/about.html" />
+{% endblock redirect %}
+
+{% block content %}
+<section id="content"  class="body">
+{% block content_title %}
+<h1>Kaveh Gharavi</h1>
+
+{% endblock content_title %}
+
+Personal website of Kaveh Gharavi. Redirecting to the <a href="{{ SITEURL }}/pages/about.html">about page.</a>
+
+{% endblock content %}
+

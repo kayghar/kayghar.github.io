@@ -5,6 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Kaveh Gharavi'
 SITENAME = 'Conferment of the Thirty Birds'
 SITEURL = ''
+THEME_STATIC_DIR = 'theme/static'
+CSS_FILE = 'main.css'
 
 PATH = 'content'
 
@@ -23,11 +25,12 @@ AUTHOR_FEED_RSS = None
 
 # Menu Items at the top
 
-MENUITEMS = (('Home', '/'),
+MENUITEMS = (('About', '/pages/about.html'),
             ('Blog', '/category/blog.html'),
-            ('About Me', '/aboutme.html'),
             ('CV', '/cv.html'),
-            ('GitHub', 'https://github.com/kayghar'),
+            ('Publications', '/pubs.html'),
+            ('Contact', '/pages/contact.html'),
+            ('Archive', '/archives.html')
             )
 
 # Blogroll, i.e. 'links' in the footer
@@ -39,6 +42,7 @@ SOCIAL = (('Twitter', 'http://twitter.com/kayghar'),)
 
 DEFAULT_PAGINATION = False
 DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False

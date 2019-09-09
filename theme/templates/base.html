@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    {% block head %}
+      <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+      {% block redirect %}
+      {% endblock redirect %}
+    {% endblock head %}
+  </head>
+
+  <body id="index" class="home">
+    <header id="banner" class="body">
+            <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+    
+    <nav id="menu"><ul>
+    {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+    {% endfor %}
+    {% if DISPLAY_PAGES_ON_MENU %}
+      {% for p in pages %}
+        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+    {% endif %}
+    {% if DISPLAY_CATEGORIES_ON_MENU %}
+      {% for cat, null in categories %}
+        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+      {% endfor %}
+    {% endif %}
+    </ul></nav><!-- /#menu -->
+  </header><!-- /#banner -->
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+      <section id="extras" class="body">
+        {% if LINKS %}
+          <div class="blogroll">
+            <h2>{{ LINKS_WIDGET_NAME | default('Links') }}</h2>
+            <ul>
+            {% for name, link in LINKS %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+            </ul>
+          </div><!-- /.LINKS -->
+        {% endif %}
+        {% if SOCIAL %}
+          <div class="social">
+            <h2>{{ SOCIAL_WIDGET_NAME | default('Social') }}</h2>
+            <ul>
+                {% for name, link in SOCIAL %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+            </ul>
+          </div><!-- /.social -->
+        {% endif %}
+      </section><!-- /#extras -->
+      {% block Copyright %}
+      <footer id="contentinfo" class="body">
+              <address id="about" class="vcard body">
+              Copyright (c) 2019, Kaveh Gharavi.
+              </address><!-- /#about -->
+      </footer><!-- /#contentinfo -->
+      {% endblock Copyright %}
+
+    {% endblock footer %}
+  </body>
+</html>
