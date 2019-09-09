@@ -1,8 +1,8 @@
 title: Blog Setup
 slug: blogsetup
-category: Posts
+category: Notes for Self
 date:2019-09-01
-modified:2019-09-01
+modified:2019-09-03
 
 # Blog Setup
 
@@ -12,7 +12,7 @@ Start by creating a new conda env for pelican and install
     conda install python pip markdown
     pip install pelican
 
-Then go to the kayghar.markdown.io folder and initiate the website
+Then go to the kayghar.github.io folder and initiate the website
 
     pelican-quickstart
 
@@ -38,7 +38,13 @@ in /output
     make html
     make publish
 
-The question is how to automate pushing to GitHub pages.
+And we can get python's http server to server the contents of output/ on
+socket 8000:
+
+    python -m http.server output
+
+Make changes and repeat. When we're happy we should push to remote. The
+question is how to automate pushing to GitHub pages.
 
   1. Develop on branch gh-pages.
   2. make publish, iterate.
@@ -56,7 +62,7 @@ script that does that:
     cp -r output/* ./
     rm -r output/
     git add .
-    git commit -a "$commitmessage -- Copied to branch master."
+    git commit -m "$commitmessage -- Copied to branch master."
     git push
 
 This script is saved as deployfrombranch.sh added to gitignore. And, I
