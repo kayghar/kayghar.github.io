@@ -12,3 +12,4 @@
 3. Review and write selected journal entries, passwd protect
 4. Need a better site name
 5. Write/attach the cv and the list of publications
+6. Pixel art for the tab icon.

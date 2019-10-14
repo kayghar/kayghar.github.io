@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Conferment of the Thirty Birds - [Encrypted] Journal</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="/theme/static/css/main.css" />
+
+
+
+
+
+  </head>
+
+  <body id="index" class="home">
+    <header id="banner" class="body">
+            <h1><a href="/">Conferment of the Thirty Birds <strong></strong></a></h1>
+    
+    <nav id="menu"><ul>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/category/blog.html">Blog</a></li>
+        <li><a href="/cv.html">CV</a></li>
+        <li><a href="/pubs.html">Publications</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+        <li><a href="/archives.html">Archive</a></li>
+    </ul></nav><!-- /#menu -->
+  </header><!-- /#banner -->
+<section id="content" class="body">
+  <header>
+    <h1 class="entry-title">
+      <a href="/journal.html" rel="bookmark"
+         title="Permalink to [Encrypted] Journal">[Encrypted] Journal</a></h1>
+ 
+  </header>
+  
+  
+
+  <div class="entry-content">
+    <div id="pec-encrypted-content" style="display:none">80ZHCTZqv4dtkQKBser/AA==;qw+H6PQUMCGJV42LbnzLDgJNg4m3altU0UuMpEcYYFRKyYzLuYBAPdi/Jzi9B65ev0nxgnWnqjGGQEFv8G5j27BPU0MStg038255MxSdsBxlOtnO80hhPWhwP3fxQiTyBpZqbs3/RuALiIBQAMLzEipwSSesIzEjjV/qxbLqfEjyFaN4P9BTRDBsO3h29emGPsr+qJ5f8hCiqrPiY5AMIOd2/w/tGjS1R+fh16zijpE2obckJrqC+PDt8cPUavEGmKGYcYDO1BOpO9j1D7Q1UjaqtFl3meojR6Dve0202lvfEtK/yJU+3R6mhRtUStnpwv4ajyjphKtLIk+31iE0N6FsdL60EZeFDQdJ8IoQe7j7qwSzsupV9qfJxEXj+EbkB0RGs6zlsT6w9VpGaRK5uuW+cG2XSUygF1pGbnp4aS+k0a1Er5DfPPO+Gn1tLumz3NeT32heWcKt4M7fbE1yICj2+02Ob1Ug7Bq9lti5SP42LECOnv4LvgieTn/NHljOE/867sz+Uz9pQXITSZ9YAClDv4gz5Im+JqXtMdAHk6/n6FQzNpkWPAGN4DTVzgxAHTtqJAqRpFKEpFv3r8oAEZtL+HGJ1CFVmlyTmfBKqwG8J5Wapa+v7YYFSGcoJuptzOEkRw8PjIqiLyia8qeVMV/NmMu9CefK7fy4bJBkL7ZmfE3Rod5v68qWgCTiDkg7DxU+8Cp2yhKJMdvz92Yqugb59m5S8+HMHMaJ7SsroIvjRVI0PmXGBGU3Nw9o7Vm6vpCQ3sS8mFm3DXVVF3ulersBvsnrRS0XkvCs7OzksL+yKZapj+9Z3zwJQAHSQ3SLvlZMLjUSpi08Cf7qQeiYHzabt6/hVg1vFCw1+fEF+k8FR7Cs1pCtkPzvsW64kiq6l9T0oePzcts1ncblJxHk2BLBbggkhCQ3r7wj1G9devoWgsV+btvIHig6sjcz7JlIJouvWWVE+fWmFVknFC+WK64KSEmbDNBahPRLawLk35iQjdLNGHqAfPIUXl8oicUGoVM42XnrAapP8UWQVLj9VuCHpa4M+ZJCT0TtTuxc2ssNmCiZ6OYkD6Ysih1BvuY6gP1mivX44kXXE/actbs/xEik12w9GmlEWZAWcb8yWvtvDwjnw5J6+nRrEM4hsD21ptM3w/zzbUWO5rYaz4U/7KDEoKd97xsncIwvcPGfUuhni0U6jL7+2PeEghlFUvQqx2bpotJfw5xj1IbEmrf4Rm1nTmasfj9VHvfDCApxTSud1yvZnyoTa8rVTbYR2hEB;^</div>
+<div id="pec-decrypted-content">
+    <h4><i>This content is confidential and encrypted.</i></h4>
+</div>
+
+<form id="pec-decrypt-form">
+    <label for="pec-content-password">Password</label>
+    <input type="password" id="pec-content-password" placeholder="Password" />
+    <button type="button" id="pec-decrypt-content">Decrypt</button>
+</form>
+
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/pad-nopadding.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/md5.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes.js"></script>
+
+
+<script type="text/javascript">
+    (function () {
+        var strip_padding = function (padded_content, padding_char) {
+            /*
+             * Strips the padding character from decrypted content.
+             */
+            for (var i = padded_content.length; i > 0; i--) {
+                if (padded_content[i-1] !== padding_char) {
+                    return padded_content.slice(0, i);
+                }
+            }
+        };
+
+        var decrypt_content = function (password, iv_b64, ciphertext_b64, padding_char) {
+            /*
+             * Decrypts the content from the ciphertext bundle.
+             */
+            var key = CryptoJS.MD5(password),
+                iv = CryptoJS.enc.Base64.parse(iv_b64),
+                ciphertext = CryptoJS.enc.Base64.parse(ciphertext_b64),
+                bundle = {
+                    key: key,
+                    iv: iv,
+                    ciphertext: ciphertext
+                };
+
+            var plaintext = CryptoJS.AES.decrypt(bundle, key, {iv: iv, padding: CryptoJS.pad.NoPadding});
+
+            try {
+                return strip_padding(plaintext.toString(CryptoJS.enc.Utf8), padding_char);
+            }
+            catch (err) {
+                // encoding failed; wrong password
+                return false;
+            }
+        };
+
+        var init_decryptor = function() {
+            var decrypt_btn = document.getElementById('pec-decrypt-content'),
+                password_input = document.getElementById('pec-content-password'),
+                encrypted_content = document.getElementById('pec-encrypted-content'),
+                decrypted_content = document.getElementById('pec-decrypted-content'),
+                decrypt_form = document.getElementById('pec-decrypt-form');
+
+            decrypt_btn.addEventListener('click', function () {
+                // grab the ciphertext bundle
+                var parts = encrypted_content.innerHTML.split(';');
+
+                // decrypt it
+                var content = decrypt_content(
+                    password_input.value,
+                    parts[0],
+                    parts[1],
+                    parts[2]
+                );
+
+                if (content) {
+                    // success; display the decrypted content
+                    decrypted_content.innerHTML = content;
+                    decrypt_form.parentNode.removeChild(decrypt_form);
+                    encrypted_content.parentNode.removeChild(encrypted_content);
+
+                    // any post processing on the decrypted content should be done here
+                }
+                else {
+                    // ¯\_(ツ)_/¯
+                    password_input.value = '';
+                }
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', init_decryptor);
+    })();
+</script>
+  </div><!-- /.entry-content -->
+  <footer class="post-info">
+      Posted <time class="published" datetime="2019-10-14T00:00:00-04:00">
+        Mon 14 October 2019.
+      </time>
+      Modified <time class="modified" datetime="2019-10-14T00:00:00-04:00">
+        Mon 14 October 2019.
+      </time>
+      <address class="vcard author">
+        By             <a class="url fn" href="/author/kaveh-gharavi.html">Kaveh Gharavi</a>
+      </address>
+      <div class="category">
+          Category: <a href="/category/notes-for-self.html">Notes for Self</a>
+      </div>
+  </footer><!-- /.post-info -->
+  
+</section>
+      <section id="extras" class="body">
+          <div class="blogroll">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://github.com/kayghar">GitHub</a></li>
+            </ul>
+          </div><!-- /.LINKS -->
+          <div class="social">
+            <h2>Social</h2>
+            <ul>
+                <li><a href="http://twitter.com/kayghar">Twitter</a></li>
+            </ul>
+          </div><!-- /.social -->
+      </section><!-- /#extras -->
+      <footer id="contentinfo" class="body">
+              <address id="about" class="vcard body">
+              Copyright (c) 2019, Kaveh Gharavi.
+              </address><!-- /#about -->
+      </footer><!-- /#contentinfo -->
+
+  </body>
+</html>
