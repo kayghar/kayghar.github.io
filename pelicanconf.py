@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Kaveh Gharavi'
-SITENAME = 'Conferment of the Thirty Birds'
+SITENAME = 'Kaveh Gharavi'
 SITEURL = ''
 THEME_STATIC_DIR = 'theme/static'
 CSS_FILE = 'main.css'

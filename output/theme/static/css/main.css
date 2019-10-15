@@ -5,7 +5,7 @@
 	Version: 1.0
 	License: MIT <http://opensource.org/licenses/MIT>
 	Licensed by: Smashing Media GmbH <http://www.smashingmagazine.com/>
-	Original author: Enrique Ramírez <http://enrique-ramirez.com/>
+	Original author: Enrique RamÃ­rez <http://enrique-ramirez.com/>
 */
 
 /* Imports */
@@ -17,8 +17,8 @@
 /***** Global *****/
 /* Body */
 body {
-    background: #004e2e;
-    color: #004e2e;
+    background: #040404;
+    color: #AAAAAA;
     font-size: 100; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.6;
@@ -50,13 +50,13 @@ hr { border: 2px solid #EEEEEE; }
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #ff9900;
+	color: #0A5E28;
 	padding: 0 1px;
 	text-decoration: underline;
 }
 a:hover, a:active {
-	background-color: #ff9900;
-	color: #fff;
+	background-color: inherit;
+	color:#FF9A00;
 	text-decoration: none;
 }
 
@@ -179,6 +179,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 		font-weight: bold;
 		margin: 0 0 .6em .2em;
 		text-decoration: none;
+		text-align: center;
 	}
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
@@ -190,7 +191,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 
 	/* Main Nav */
 	#banner nav {
-		background: #00973a;
+		background: #040404;
 		font-size: 1.143em;
 		height: 40px;
 		line-height: 30px;
@@ -198,13 +199,17 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 		padding: 0;
 		text-align: center;
 		width: 800px;
-
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
 
-	#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
+	#banner nav ul {
+		list-style: none;
+		/* margin: 0 auto;
+		width: 800px; */
+		display: inline-block;
+	}
 	#banner nav li {float: left; display: inline; margin: 0;}
 
 	#banner nav a:link, #banner nav a:visited {
@@ -216,8 +221,8 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	}
 	#banner nav a:hover, #banner nav a:active,
 	#banner nav .active a:link, #banner nav .active a:visited {
-		background: #ff9900;;
-		color: #fff;
+		background: inherit;
+		color: #ff9a00;
 		text-shadow: none !important;
 	}
 
@@ -264,12 +269,11 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	Body
 *****************/
 #content {
-	background: #fff;
+	background: #040404;
 	margin-bottom: 2em;
 	overflow: hidden;
 	padding: 20px 20px;
 	width: 760px;
-
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -351,7 +355,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	About
 *****************/
 #about {
-	background: #fff;
+	background: inherit;
 	font-style: normal;
 	margin-bottom: 2em;
 	overflow: hidden;
@@ -388,8 +392,13 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #content > .hentry {padding: 1em 0;}
 .hentry img{display : none ;}
-.entry-title {font-size: 2em; margin-bottom: 10px; margin-top: 0;}
-.entry-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
+.entry-title {
+	font-size: 2em;
+	margin-bottom: 10px;
+	margin-top: 0;
+	color: #0A5E28
+}
+.entry-title a:link, .entry-title a:visited {text-decoration: none;}
 .entry-title a:visited {background-color: #fff;}
 
 .hentry .post-info * {font-style: normal;}
@@ -413,7 +422,7 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 
 	/* About the Author */
 	#about-author {
-		background: #f9f9f9;
+		background: #040404;
 		clear: both;
 		font-style: normal;
 		margin: 2em 0;

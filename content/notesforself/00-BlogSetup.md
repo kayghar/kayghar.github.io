@@ -2,7 +2,7 @@ title: Blog Setup
 slug: blogsetup
 category: Notes for Self
 date:2019-09-01
-modified:2019-09-03
+modified:2019-10-14
 password:zkkS]GWwZ%N(;F>q)k*3XO6?
 
 # Blog Setup
@@ -42,7 +42,7 @@ in /output
 And we can get python's http server to server the contents of output/ on
 socket 8000:
 
-    python -m http.server output
+    python -m http.server -d output/
 
 Make changes and repeat. When we're happy we should push to remote. The
 question is how to automate pushing to GitHub pages.
@@ -89,3 +89,7 @@ in the 1password vault.
         title:mytitle
         etc
         password:mypassword
+
+### Colour Picker
+
+For mockup-dev, an advanced colour picker is needed. Gpick is good choice.
