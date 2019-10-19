@@ -14,6 +14,17 @@
 @import url("typogrify.css");
 @import url("fonts.css");
 
+/* My Six Colours 
+
+#0A5E28 Green
+#FF9A00 Gold
+#040404 Dark Background
+#535353 Grey
+#AAAAAA Light Grey / Main Text
+#F5F4F4 Very Light Grey / White
+
+*/
+
 /***** Global *****/
 /* Body */
 body {
@@ -36,7 +47,7 @@ h5 {font-size: 1.1em}	/* 16px */
 h6 {font-size: 1em}		/* 14px */
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 300;
+	font-weight: 300; /* 400 is 'normal', 700 is 'bold' */
 	line-height: 1.1;
 	margin-bottom: .8em;
     font-family: 'Linux Libertine', serif;
@@ -44,7 +55,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h3, h4, h5, h6 { margin-top: .8em; }
 
-hr { border: 2px solid #EEEEEE; }
+hr.heavy { 
+	border: 0;
+    color: #FF9A00;
+    background-color: #FF9A00;
+    height: 0.2em;	
+}
+hr.light { 
+	border: 0;
+    color: #AAAAAA;
+    background-color: #AAAAAA;
+    height: 0.15em;	
+}
 
 /* Anchors */
 a {outline: 0;}
@@ -195,7 +217,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 		font-size: 1.143em;
 		height: 40px;
 		line-height: 30px;
-		margin: 0 auto 2em auto;
+		margin: 0 auto 0.2em auto;
 		padding: 0;
 		text-align: center;
 		width: 800px;
@@ -386,17 +408,24 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 .hentry {
 	display: block;
 	clear: both;
-	border-bottom: 1px solid #eee;
+	/* border-bottom: 1px solid #eee; */
 	padding: 1.5em 0;
 }
 li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #content > .hentry {padding: 1em 0;}
 .hentry img{display : none ;}
 .entry-title {
+	font-size: 3em;
+	margin-bottom: 10px;
+	margin-top: 0;
+	color: #0A5E28
+}
+.entry-title-category {
 	font-size: 2em;
 	margin-bottom: 10px;
 	margin-top: 0;
 	color: #0A5E28
+	
 }
 .entry-title a:link, .entry-title a:visited {text-decoration: none;}
 .entry-title a:visited {background-color: #fff;}
@@ -404,6 +433,10 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 .hentry .post-info * {font-style: normal;}
 
 	/* Content */
+	a.article-title {
+		text-decoration: none;
+	}
+
 	.hentry footer {margin-bottom: 2em;}
 	.hentry footer address {display: block;}
 	#posts-list footer address {display: block;}

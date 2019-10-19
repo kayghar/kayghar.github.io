@@ -7,11 +7,15 @@ password:zkkS]GWwZ%N(;F>q)k*3XO6?
 
 # Blog Setup
 
+## Conda
+
 Start by creating a new conda env for pelican and install
 
     conda create -n pelican
     conda install python pip markdown
     pip install pelican
+
+## Pelican
 
 Then go to the kayghar.github.io folder and initiate the website
 
@@ -68,6 +72,8 @@ script that does that:
 
 This script is saved as deployfrombranch.sh added to gitignore. And, I
 believe we are done!
+
+## Other features
 
 ### Adding Password Protection
 

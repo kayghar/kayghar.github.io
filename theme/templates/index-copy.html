@@ -5,15 +5,16 @@
 <h2>All articles</h2>
 {% endblock %}
 
-<ul id="post-list">
+<ul id="posts-list">
 {% for article in articles_page.object_list %}
         <li><article class="hentry">
-                <header> <h4 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h4> </header>
+                <header> <h4 class="entry-title-category"><a class="article-title" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h4> </header>
                 <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
                 <footer class="post-info">
                         Posted <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>.
                 </footer><!-- /.post-info -->
         </article></li>
+        <hr class="light">
 {% endfor %}
 </ul><!-- /#posts-list -->
 {% if articles_page.has_other_pages() %}
