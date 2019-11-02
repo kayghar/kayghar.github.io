@@ -45,3 +45,10 @@ I believe in opportunities and that they must be appreciated --- especially give
 Then again, I do believe this is an excuse. As a matter of principle, my opinion and state of mind must be under my executive control. Stoicism is the philosophy for life, even a life in which everything is lost. And I haven't lost everything --- I'm grateful to still have a mind. I must hold myself to a higher standard. I must do better.
 
 "When considering the future, remember that all situations unfold as the do regardless of how we feel about them. Our hopes and fear sway us, not the outside events."
+
+* Nov 2, 2019
+
+To not be buffeted around by outside events, to understand that your hopes and fears about the future are pertinent only to planning, and not to any emotional state.
+To examine yourself every day, to assert that your motivations are free of fear or hope, that they are principally correct and moral.
+
+Last week (SP renewal week) was a good test of equanimity, which you failed. In this there is a good opportunity for self improvement. You must have the courage to utilize it.
