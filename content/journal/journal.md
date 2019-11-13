@@ -52,3 +52,8 @@ To not be buffeted around by outside events, to understand that your hopes and f
 To examine yourself every day, to assert that your motivations are free of fear or hope, that they are principally correct and moral.
 
 Last week (SP renewal week) was a good test of equanimity, which you failed. In this there is a good opportunity for self improvement. You must have the courage to utilize it.
+
+-------------------------------
+
+    “I took a deep breath and listened to the old brag of my heart. I am, I am, I am.” –Sylvia Plath, The Bell Jar
+You didn't need to be. This is a gift. It is incumbent in you now to do your duty, assiduously.
