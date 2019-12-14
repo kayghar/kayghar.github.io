@@ -1,5 +1,16 @@
 # Outstanding Tasks
 
+## 2019-12-14 UPDATE
+
+Todo:
+
+1. Fill out the static content.
+2. Make ccss such that it looks like cortex brand (modern/acceptable.)
+3. Write the Snake AI (with TF? / TF.JS).
+4. Write the PID applet + AI (with TF? / TF.JS).
+5. Learn Apache + host static part on Linode with Apache.
+6. Insert 2x interactive apps via JS/PHP/Python glue-up or "direct" JS, ideally both, so as to show glue-up skills.
+
 ## Hosting/Major issues
 
 * Host and linode with a cdn backend (is pelican sufficient? Use node.js?)
